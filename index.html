@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmergencyCare - Quick Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚑 EmergencyCare</div>
+    <p>Quick Emergency Patient Registration</p>
+</header>
+
+<main>
+
+    <div class="emergency-banner">
+        🚨 EMERGENCY REGISTRATION
+        <span>Fast • Simple • Secure</span>
+    </div>
+
+    <section class="form-container">
+
+        <h2>Patient Details</h2>
+        <p class="subtitle">
+            Enter patient information to generate an emergency token.
+        </p>
+
+        <form id="emergencyForm">
+
+            <div class="form-grid">
+
+                <div>
+                    <label>Patient Name *</label>
+                    <input type="text" id="patientName" required>
+                </div>
+
+                <div>
+                    <label>Age *</label>
+                    <input type="number" id="age" min="0" max="120" required>
+                </div>
+
+                <div>
+                    <label>Gender *</label>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Blood Group</label>
+                    <select id="bloodGroup">
+                        <option value="">Select</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>Unknown</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Emergency Type *</label>
+                    <select id="emergencyType" required>
+                        <option value="">Select Emergency</option>
+                        <option>Accident</option>
+                        <option>Fracture / Injury</option>
+                        <option>Burn</option>
+                        <option>Breathing Problem</option>
+                        <option>Chest Pain</option>
+                        <option>Unconscious</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Hospital *</label>
+                    <select id="hospital" required>
+                        <option value="">Select Hospital</option>
+                        <option>City Emergency Hospital</option>
+                        <option>Government Hospital</option>
+                        <option>District Hospital</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Attendant Name *</label>
+                    <input type="text" id="attendantName" required>
+                </div>
+
+                <div>
+                    <label>Attendant Phone *</label>
+                    <input type="tel" id="phone"
+                           pattern="[0-9]{10}"
+                           maxlength="10"
+                           required>
+                </div>
+
+            </div>
+
+            <div class="full-width">
+                <label>Patient Address</label>
+                <textarea id="address" rows="3"></textarea>
+            </div>
+
+            <div class="consent">
+                <input type="checkbox" id="consent" required>
+                <label for="consent">
+                    I confirm that the information provided is correct.
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                🚑 Generate Emergency Token
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Result -->
+    <section id="result" class="result-container">
+
+        <h2>✅ Emergency Registration Successful</h2>
+
+        <div class="token-box">
+            <p>Your Emergency Token</p>
+            <h1 id="token"></h1>
+        </div>
+
+        <div class="result-content">
+
+            <div>
+                <p><strong>Patient:</strong> <span id="resultName"></span></p>
+                <p><strong>Emergency:</strong> <span id="resultEmergency"></span></p>
+                <p><strong>Hospital:</strong> <span id="resultHospital"></span></p>
+                <p><strong>Attendant:</strong> <span id="resultAttendant"></span></p>
+            </div>
+
+            <div class="qr-section">
+                <p><strong>Emergency QR</strong></p>
+                <img id="qrCode" alt="Emergency QR Code">
+            </div>
+
+        </div>
+
+        <p class="notice">
+            Please show this token and QR code at the emergency desk.
+        </p>
+
+        <button onclick="window.print()" class="print-btn">
+            🖨 Print Registration
+        </button>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>EmergencyCare Prototype | For Academic Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
