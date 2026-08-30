@@ -5,32 +5,44 @@
     font-family: Arial, sans-serif;
 }
 
+
 body {
     background: #f4f7fb;
-    color: #222;
+    color: #1f2937;
 }
+
+
+/* HEADER */
 
 header {
     background: #b91c1c;
     color: white;
-    padding: 22px;
     text-align: center;
+    padding: 22px;
 }
+
 
 .logo {
     font-size: 28px;
     font-weight: bold;
 }
 
+
 header p {
     margin-top: 6px;
 }
 
+
+/* MAIN */
+
 main {
-    width: 90%;
-    max-width: 950px;
+    width: 92%;
+    max-width: 1000px;
     margin: 30px auto;
 }
+
+
+/* BANNER */
 
 .emergency-banner {
     background: #fee2e2;
@@ -39,51 +51,63 @@ main {
     color: #991b1b;
     font-weight: bold;
     margin-bottom: 20px;
+    border-radius: 6px;
 }
+
 
 .emergency-banner span {
     float: right;
     font-weight: normal;
 }
 
+
+/* FORM */
+
 .form-container,
 .result-container {
     background: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
-    margin-bottom: 8px;
-}
 
 .subtitle {
-    color: #666;
-    margin-bottom: 25px;
+    color: #6b7280;
+    margin: 8px 0 25px;
 }
+
+
+h3 {
+    margin-bottom: 15px;
+}
+
 
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 18px;
 }
+
 
 label {
     display: block;
     margin-bottom: 7px;
     font-weight: bold;
+    font-size: 14px;
 }
+
 
 input,
 select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #d1d5db;
     border-radius: 7px;
     font-size: 15px;
 }
+
 
 input:focus,
 select:focus,
@@ -92,129 +116,398 @@ textarea:focus {
     border-color: #ef4444;
 }
 
+
 .full-width {
-    margin-top: 20px;
+    margin-top: 18px;
 }
+
+
+.section-heading {
+    margin-top: 30px;
+}
+
+
+/* CLINICAL SECTION */
+
+.clinical-heading {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+
+.clinical-heading h3 {
+    margin-bottom: 5px;
+}
+
+
+.clinical-heading p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+.optional-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* CONSENT */
 
 .consent {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin: 20px 0;
+    margin: 25px 0;
 }
+
 
 .consent input {
     width: auto;
 }
+
 
 .consent label {
     margin: 0;
     font-weight: normal;
 }
 
-.submit-btn,
-.print-btn {
-    border: none;
-    padding: 14px 22px;
-    border-radius: 7px;
-    font-size: 16px;
-    cursor: pointer;
-}
+
+/* BUTTON */
 
 .submit-btn {
     width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 7px;
+
     background: #dc2626;
     color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
 }
+
 
 .submit-btn:hover {
     background: #b91c1c;
 }
+
+
+/* RESULT */
 
 .result-container {
     display: none;
     margin-top: 25px;
 }
 
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.result-header p {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+
+.status {
+    background: #dcfce7;
+    color: #166534;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* PATIENT ID */
+
 .token-box {
     text-align: center;
+
     background: #ecfdf5;
+
     padding: 20px;
-    margin: 20px 0;
+
+    margin: 25px 0;
+
     border-radius: 10px;
 }
+
 
 .token-box p {
     color: #047857;
 }
 
+
 .token-box h1 {
-    font-size: 40px;
     color: #065f46;
+    font-size: 38px;
     margin-top: 5px;
 }
 
-.result-content {
+
+/* PATIENT GRID */
+
+.patient-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    background: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+
+.patient-grid div,
+.clinical-grid div {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.result-content p {
-    margin: 12px 0;
+
+.patient-grid span,
+.clinical-grid span {
+    color: #64748b;
+    font-size: 13px;
 }
 
-.qr-section {
+
+.patient-grid strong,
+.clinical-grid strong {
+    color: #1e293b;
+}
+
+
+/* CLINICAL GRID */
+
+.clinical-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    background: #f8fafc;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+
+/* INJURIES */
+
+.injuries {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+.injuries p {
+    background: #fff7ed;
+
+    padding: 12px;
+
+    border-radius: 7px;
+}
+
+
+/* RED FLAGS */
+
+.red-flags {
+    background: #fef2f2;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    color: #991b1b;
+}
+
+
+.red-flags p {
+    margin: 7px 0;
+}
+
+
+/* INFORMATION */
+
+.information-list {
+    padding-left: 25px;
+
+    line-height: 1.8;
+
+    color: #475569;
+}
+
+
+/* IMAGING */
+
+.imaging-history {
+    background: #f8fafc;
+
+    padding: 15px;
+
+    margin-top: 15px;
+
+    border-radius: 7px;
+}
+
+
+/* QR */
+
+.qr-area {
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.qr-area p {
+    color: #6b7280;
+
+    margin: 5px 0 15px;
+}
+
+
+.qr-area img {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* STATUS */
+
+.review-status {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #ecfdf5;
+
+    color: #065f46;
+
+    border-radius: 8px;
+
     text-align: center;
 }
 
-.qr-section img {
-    width: 170px;
-    height: 170px;
-    margin-top: 10px;
-}
 
-.notice {
-    background: #fff7ed;
-    padding: 12px;
-    border-radius: 6px;
-    margin: 20px 0;
-    color: #9a3412;
-}
+/* PRINT */
 
 .print-btn {
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
     background: #1f2937;
+
     color: white;
+
+    cursor: pointer;
 }
+
+
+/* FOOTER */
 
 footer {
     text-align: center;
+
     color: #777;
-    padding: 20px;
+
+    padding: 25px;
 }
+
+
+/* MOBILE */
 
 @media (max-width: 650px) {
 
-    .form-grid {
+    .form-grid,
+    .patient-grid,
+    .clinical-grid,
+    .injuries {
         grid-template-columns: 1fr;
     }
 
+
+    .result-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
     .emergency-banner span {
         float: none;
+
         display: block;
+
         margin-top: 5px;
     }
 
-    .result-content {
+
+    .clinical-heading {
         flex-direction: column;
+
         align-items: flex-start;
+
+        gap: 10px;
     }
+
 
     main {
         width: 95%;
     }
+
 }
+
+
+/* PRINT */
 
 @media print {
 
@@ -225,8 +518,13 @@ footer {
         display: none;
     }
 
+
     .result-container {
         display: block;
+
         box-shadow: none;
+
+        margin: 0;
     }
+
 }
