@@ -2,38 +2,42 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 
 body {
     background: #f4f7fb;
     color: #1f2937;
 }
 
-
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
-    background: #b91c1c;
+    background: #062b63;
     color: white;
     text-align: center;
-    padding: 22px;
+    padding: 18px 15px;
 }
 
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
+.logo-image {
+    width: 260px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px;
 }
-
 
 header p {
-    margin-top: 6px;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #e5eef9;
 }
 
-
-/* MAIN */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 main {
     width: 92%;
@@ -41,27 +45,29 @@ main {
     margin: 30px auto;
 }
 
-
-/* BANNER */
+/* =========================
+   EMERGENCY BANNER
+========================= */
 
 .emergency-banner {
-    background: #fee2e2;
-    border-left: 6px solid #dc2626;
-    padding: 15px;
-    color: #991b1b;
+    background: #eaf3ff;
+    border-left: 6px solid #062b63;
+    padding: 15px 18px;
+    color: #062b63;
     font-weight: bold;
     margin-bottom: 20px;
     border-radius: 6px;
 }
 
-
 .emergency-banner span {
     float: right;
     font-weight: normal;
+    color: #167d91;
 }
 
-
-/* FORM */
+/* =========================
+   FORM & RESULT CONTAINERS
+========================= */
 
 .form-container,
 .result-container {
@@ -71,17 +77,33 @@ main {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-
-.subtitle {
-    color: #6b7280;
-    margin: 8px 0 25px;
+.result-container {
+    display: none;
+    margin-top: 25px;
 }
 
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+    color: #062b63;
+    margin-bottom: 8px;
+}
 
 h3 {
+    color: #062b63;
     margin-bottom: 15px;
 }
 
+.subtitle {
+    color: #64748b;
+    margin: 8px 0 25px;
+}
+
+/* =========================
+   FORM GRID
+========================= */
 
 .form-grid {
     display: grid;
@@ -89,45 +111,52 @@ h3 {
     gap: 18px;
 }
 
-
 label {
     display: block;
     margin-bottom: 7px;
     font-weight: bold;
     font-size: 14px;
+    color: #334155;
 }
-
 
 input,
 select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #cbd5e1;
     border-radius: 7px;
     font-size: 15px;
+    background: white;
+    color: #1f2937;
 }
-
 
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 2px solid #ef4444;
-    border-color: #ef4444;
+    outline: 2px solid #2c9bb0;
+    border-color: #2c9bb0;
 }
 
+textarea {
+    resize: vertical;
+}
 
 .full-width {
     margin-top: 18px;
 }
 
+/* =========================
+   SECTION HEADING
+========================= */
 
 .section-heading {
     margin-top: 30px;
 }
 
-
-/* CLINICAL SECTION */
+/* =========================
+   CLINICAL INFORMATION
+========================= */
 
 .clinical-heading {
     margin-top: 30px;
@@ -137,26 +166,25 @@ textarea:focus {
     justify-content: space-between;
     align-items: center;
 
-    background: #f8fafc;
+    background: #f1f7fb;
+    border-left: 4px solid #167d91;
+
     padding: 18px;
     border-radius: 8px;
 }
 
-
 .clinical-heading h3 {
     margin-bottom: 5px;
 }
-
 
 .clinical-heading p {
     color: #64748b;
     font-size: 13px;
 }
 
-
 .optional-badge {
-    background: #e0f2fe;
-    color: #0369a1;
+    background: #dff4f7;
+    color: #086b7d;
 
     padding: 7px 12px;
     border-radius: 20px;
@@ -165,8 +193,9 @@ textarea:focus {
     font-weight: bold;
 }
 
-
-/* CONSENT */
+/* =========================
+   CONSENT
+========================= */
 
 .consent {
     display: flex;
@@ -175,19 +204,18 @@ textarea:focus {
     margin: 25px 0;
 }
 
-
 .consent input {
     width: auto;
 }
-
 
 .consent label {
     margin: 0;
     font-weight: normal;
 }
 
-
-/* BUTTON */
+/* =========================
+   SUBMIT BUTTON
+========================= */
 
 .submit-btn {
     width: 100%;
@@ -196,7 +224,7 @@ textarea:focus {
     border: none;
     border-radius: 7px;
 
-    background: #dc2626;
+    background: #062b63;
     color: white;
 
     font-size: 16px;
@@ -205,19 +233,13 @@ textarea:focus {
     cursor: pointer;
 }
 
-
 .submit-btn:hover {
-    background: #b91c1c;
+    background: #041f49;
 }
 
-
-/* RESULT */
-
-.result-container {
-    display: none;
-    margin-top: 25px;
-}
-
+/* =========================
+   RESULT HEADER
+========================= */
 
 .result-header {
     display: flex;
@@ -226,12 +248,10 @@ textarea:focus {
     gap: 20px;
 }
 
-
 .result-header p {
-    color: #6b7280;
+    color: #64748b;
     margin-top: 5px;
 }
-
 
 .status {
     background: #dcfce7;
@@ -245,13 +265,16 @@ textarea:focus {
     font-weight: bold;
 }
 
-
-/* PATIENT ID */
+/* =========================
+   PATIENT ID
+========================= */
 
 .token-box {
     text-align: center;
 
-    background: #ecfdf5;
+    background: #edf8f8;
+
+    border: 1px solid #c8e8eb;
 
     padding: 20px;
 
@@ -260,20 +283,20 @@ textarea:focus {
     border-radius: 10px;
 }
 
-
 .token-box p {
-    color: #047857;
+    color: #167d91;
+    font-weight: bold;
 }
 
-
 .token-box h1 {
-    color: #065f46;
+    color: #062b63;
     font-size: 38px;
     margin-top: 5px;
 }
 
-
-/* PATIENT GRID */
+/* =========================
+   PATIENT INFORMATION
+========================= */
 
 .patient-grid {
     display: grid;
@@ -289,7 +312,6 @@ textarea:focus {
     border-radius: 10px;
 }
 
-
 .patient-grid div,
 .clinical-grid div {
     display: flex;
@@ -297,21 +319,20 @@ textarea:focus {
     gap: 5px;
 }
 
-
 .patient-grid span,
 .clinical-grid span {
     color: #64748b;
     font-size: 13px;
 }
 
-
 .patient-grid strong,
 .clinical-grid strong {
     color: #1e293b;
 }
 
-
-/* CLINICAL GRID */
+/* =========================
+   CLINICAL GRID
+========================= */
 
 .clinical-grid {
     display: grid;
@@ -327,8 +348,9 @@ textarea:focus {
     border-radius: 10px;
 }
 
-
-/* INJURIES */
+/* =========================
+   INJURIES
+========================= */
 
 .injuries {
     display: grid;
@@ -338,17 +360,19 @@ textarea:focus {
     gap: 10px;
 }
 
-
 .injuries p {
     background: #fff7ed;
 
     padding: 12px;
 
     border-radius: 7px;
+
+    color: #7c2d12;
 }
 
-
-/* RED FLAGS */
+/* =========================
+   RED FLAGS
+========================= */
 
 .red-flags {
     background: #fef2f2;
@@ -358,15 +382,17 @@ textarea:focus {
     border-radius: 8px;
 
     color: #991b1b;
-}
 
+    border-left: 4px solid #dc2626;
+}
 
 .red-flags p {
     margin: 7px 0;
 }
 
-
-/* INFORMATION */
+/* =========================
+   IMAGING INFORMATION
+========================= */
 
 .information-list {
     padding-left: 25px;
@@ -376,9 +402,6 @@ textarea:focus {
     color: #475569;
 }
 
-
-/* IMAGING */
-
 .imaging-history {
     background: #f8fafc;
 
@@ -387,10 +410,13 @@ textarea:focus {
     margin-top: 15px;
 
     border-radius: 7px;
+
+    color: #475569;
 }
 
-
-/* QR */
+/* =========================
+   QR CODE
+========================= */
 
 .qr-area {
     text-align: center;
@@ -399,24 +425,32 @@ textarea:focus {
 
     padding: 20px;
 
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #e2e8f0;
 }
 
+.qr-area h3 {
+    margin-bottom: 5px;
+}
 
 .qr-area p {
-    color: #6b7280;
+    color: #64748b;
 
     margin: 5px 0 15px;
 }
 
-
 .qr-area img {
     width: 200px;
     height: 200px;
+
+    border: 1px solid #dbe3ec;
+    padding: 8px;
+
+    border-radius: 8px;
 }
 
-
-/* STATUS */
+/* =========================
+   REVIEW STATUS
+========================= */
 
 .review-status {
     margin-top: 25px;
@@ -427,13 +461,16 @@ textarea:focus {
 
     color: #065f46;
 
+    border: 1px solid #bbf7d0;
+
     border-radius: 8px;
 
     text-align: center;
 }
 
-
-/* PRINT */
+/* =========================
+   PRINT BUTTON
+========================= */
 
 .print-btn {
     margin-top: 20px;
@@ -444,26 +481,40 @@ textarea:focus {
 
     border-radius: 7px;
 
-    background: #1f2937;
+    background: #062b63;
 
     color: white;
 
     cursor: pointer;
+
+    font-size: 15px;
 }
 
+.print-btn:hover {
+    background: #041f49;
+}
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
+    background: #062b63;
+
+    color: white;
+
     text-align: center;
 
-    color: #777;
+    padding: 18px;
 
-    padding: 25px;
+    margin-top: 30px;
+
+    font-size: 13px;
 }
 
-
-/* MOBILE */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
 @media (max-width: 650px) {
 
@@ -474,40 +525,40 @@ footer {
         grid-template-columns: 1fr;
     }
 
-
     .result-header {
         flex-direction: column;
-
         align-items: flex-start;
     }
-
 
     .emergency-banner span {
         float: none;
-
         display: block;
-
         margin-top: 5px;
     }
 
-
     .clinical-heading {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 10px;
     }
 
+    .logo-image {
+        width: 230px;
+    }
 
     main {
         width: 95%;
     }
 
+    .form-container,
+    .result-container {
+        padding: 20px;
+    }
 }
 
-
-/* PRINT */
+/* =========================
+   PRINT
+========================= */
 
 @media print {
 
@@ -518,7 +569,6 @@ footer {
         display: none;
     }
 
-
     .result-container {
         display: block;
 
@@ -527,4 +577,7 @@ footer {
         margin: 0;
     }
 
+    body {
+        background: white;
+    }
 }
